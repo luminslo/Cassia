@@ -3,18 +3,18 @@ import { ClientData } from "../types/client";
 import { ClientUtil } from "../util/util.js";
 
 export class Client extends C {
-	data: ClientData;
-	util: ClientUtil;
-	constructor(data: ClientData) {
-		super({
-			intents: data.intents,
-		});
+  data: ClientData;
+  util: ClientUtil;
+  constructor(data: ClientData) {
+    super({
+      intents: data.intents,
+    });
 
-		this.data = data;
-		this.util = new ClientUtil();
-	}
+    this.data = data;
+    this.util = new ClientUtil();
+  }
 
-	init() {
-		this.login(this.data.token);
-	}
+  init() {
+    this.login(this.data.token);
+  }
 }

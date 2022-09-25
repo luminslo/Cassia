@@ -4,14 +4,14 @@ import { GatewayIntentBits } from "discord.js";
 import * as dotenv from "dotenv";
 dotenv.config();
 export const cassia = new Client({
-    intents: [
-        GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers,
-        GatewayIntentBits.GuildMessages,
-    ],
-    prefix: "c.",
-    token: process.env.TOKEN,
-    listenerDirectory: "dist/listeners",
+  intents: [
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildMessages,
+  ],
+  prefix: "c.",
+  token: process.env.TOKEN,
+  listenerDirectory: "dist/listeners",
 });
 ListenerHandler(cassia);
 cassia.init();
